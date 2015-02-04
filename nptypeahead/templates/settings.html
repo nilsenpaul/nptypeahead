@@ -1,0 +1,19 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.multiselectField({
+    label:        	"Use values from this field(s)"|t,
+    instructions: 	"Typeahead will get the values of all selected fields",
+    id:           	'getValuesFrom',
+    name:         	'getValuesFrom',
+    options:      	fields,
+    values:			settings.getValuesFrom
+}) }}
+
+{{ forms.selectField({
+    label:        	"Minimum Length"|t,
+    instructions: 	"TypeAhead will start typing ahead after this number of characters",
+    id:           	'minLength',
+    name:         	'minLength',
+    options:      	0..10,
+    value:			settings.minLength
+}) }}

@@ -1,0 +1,13 @@
+{% import "_includes/forms" as forms %}
+
+{% set config = {
+    id: name,
+    name: name,
+    value: value,
+    class: 'nicetext '~class,
+} %}
+
+<div class="nptypeahead-wrapper">
+    {{ forms.text(config) }}
+    <div class="nptypeahead-msg"></div>
+</div>
